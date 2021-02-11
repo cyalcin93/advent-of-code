@@ -1,5 +1,6 @@
 import org.junit.Assert
 import org.junit.Test
+import java.io.File
 
 
 class Day7Test {
@@ -15,7 +16,13 @@ class Day7Test {
                 "vibrant plum bags contain 5 faded blue bags, 6 dotted black bags.\n" +
                 "faded blue bags contain no other bags.\n" +
                 "dotted black bags contain no other bags."
-        Assert.assertEquals(4, Day7().part1(input))
+        Assert.assertEquals(4, Day7Part1().part1(input))
+    }
+
+    @Test
+    fun `Testar att vi får ut riktiga output`() {
+        val input = File("src/main/resources/Day7Part1").readText()
+        Assert.assertEquals(148, Day7Part1().part1(input))
     }
 
 }
